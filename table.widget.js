@@ -31,12 +31,20 @@
 
 		self.onCalculatedValueChanged = function(settingName, newValue){
 
-			if(settingName == 'model'){
-				console.log('understandably');
+			if(settingName == 'name'){
+				console.log('newValue');
 			}
 
-			if(settingName){
-				console.log('1');
+			if(settingName == 'model'){
+				console.log('newValue');
+			}
+		
+			if(settingName == 'status'){
+				console.log('newValue');
+			}
+
+			if(settingName == 'low_buttery'){
+				console.log('newValue');
 			}
 		}
 	}
