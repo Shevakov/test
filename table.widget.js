@@ -32,19 +32,19 @@
 		self.onCalculatedValueChanged = function(settingName, newValue){
 
 			if(settingName == 'name'){
-				console.log('newValue');
+				console.log(newValue);
 			}
 
 			if(settingName == 'model'){
-				console.log('newValue');
+				console.log(newValue);
 			}
 		
 			if(settingName == 'status'){
-				console.log('newValue');
+				console.log(newValue);
 			}
 
 			if(settingName == 'low_buttery'){
-				console.log('newValue');
+				console.log(newValue);
 			}
 		}
 	}
