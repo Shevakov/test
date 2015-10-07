@@ -31,6 +31,10 @@
 
 		self.onCalculatedValueChanged = function(settingName, newValue){
 
+			var foo = newValue;
+
+			console.log(foo);
+
 			if(settingName == 'name'){
 				console.log(newValue);
 			}
