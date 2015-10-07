@@ -43,8 +43,8 @@
 				console.log(newValue);
 			}
 
-			if(settingName == 'low_buttery'){
-				console.log(newValue);
+			if(settingName == 'low_battery'){
+				console.log('1');
 			}
 		}
 	}
