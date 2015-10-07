@@ -31,6 +31,10 @@
 
 		self.onCalculatedValueChanged = function(settingName, newValue){
 
+			if(settingName == 'model'){
+				console.log('understandably');
+			}
+
 			if(settingName){
 				console.log('1');
 			}
