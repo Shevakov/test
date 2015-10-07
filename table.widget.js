@@ -7,15 +7,7 @@
 
 		self.render = function(containerElement) {
 			console.log('all be back')
-				function rowWriter(json) {
-	  var tr = '';
 
-	  for (var key in json) {
-	    tr += '<td>' + json[key] + '</td>';
-	  }
-
-	  return '<tr>' + tr + '</tr>';
-	};
 		  var tbody = '';
 
 		  for(var i = 0, len = drone.length; i < len; i++){
@@ -33,7 +25,7 @@
 			return 4;
 		}
 
-		self.onSettingsChanged = function(onSettings){
+		self.onSettingsChanged = function(newSettings){
 			currentSettings = newSettings;
 		}
 
@@ -45,10 +37,20 @@
 		}
 	}
 
+	function rowWriter(json) {
+	  var tr = '';
+
+	  for (var key in json) {
+	    tr += '<td>' + json[key] + '</td>';
+	  }
+
+	  return '<tr>' + tr + '</tr>';
+	};
+
 	var drone = [
-    {'Name': 'Drone1', 'Model': 'Model1', 'Status': 'Online', 'Low buttery': 'true'},
-    {'Name': 'Drone2', 'Model': 'Model2', 'Status': 'Online', 'Low buttery': 'false'},
-    {'Name': 'Drone3', 'Model': 'Model1', 'Status': 'Online', 'Low buttery': 'true'}
+    {'name': 'Drone1', 'model': 'Model1', 'status': 'Online', 'low_buttery': 'true'},
+    {'name': 'Drone2', 'model': 'Model2', 'status': 'Online', 'low_buttery': 'false'},
+    {'name': 'Drone3', 'model': 'Model1', 'status': 'Online', 'low_buttery': 'true'}
 	];
 
 	freeboard.loadWidgetPlugin({
