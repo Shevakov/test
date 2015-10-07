@@ -57,14 +57,35 @@
 		'description' : 'This plugin ',
 		'fill_size' : 'false',
 	    'settings': [
-	      {
-	        'name': 'value',
-	        'display_name': 'Initial value',
-	        'type': 'text',
-	        'default_value': '',
-	        'description': 'Initial value for the state'
-	      }
-	    ],
+      {
+        'name': 'name',
+        'display_name': 'Name',
+        'type': 'calculated',
+        'default_value': '',
+        'description': 'name drone'
+      },
+      {
+        'name': 'model',
+        'display_name': 'Model',
+        'type': 'calculated',
+        'default_value': '',
+        'description': 'model drone'
+      },
+      {
+        'name': 'status',
+        'display_name': 'Status',
+        'type': 'calculated',
+        'default_value': '',
+        'description': 'state drone online/offline'
+      },
+      {
+        'name': 'low_battery',
+        'display_name': 'Low buttery',
+        'type': 'calculated',
+        'default_value': '',
+        'description': 'state buttery'
+      }
+    ],
 
 		newInstance: function(settings, newInstanceCallback)
 		{
