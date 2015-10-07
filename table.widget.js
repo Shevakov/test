@@ -39,7 +39,9 @@
 
 		self.onCalculatedValueChanged = function(settingName, newValue){
 
-			if(settingName)
+			if(settingName){
+				console.log('1');
+			}
 		}
 	}
 
