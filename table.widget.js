@@ -54,14 +54,14 @@
 	freeboard.loadWidgetPlugin({
 		'type_name' : 'my_table_widget',
 		'display_name' : 'Table Widget',
-		'description' : 'This plugin ',
+		'description' : 'This plugin displays information about drones',
 		'fill_size' : 'false',
 	    'settings': [
       {
         'name': 'name',
         'display_name': 'Name',
         'type': 'calculated',
-        'default_value': '',
+        'default_value': 'Drone',
         'description': 'name drone'
       },
       {
