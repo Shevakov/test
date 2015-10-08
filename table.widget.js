@@ -43,12 +43,16 @@
 					console.log('status');
 				}
 
-				if(settingName == 'low_buttery'){
-					console.log('low_buttery');
+				if(settingName == 'low_battery'){
+					console.log('low_battery');
 				}
 
 			}
 		}
+
+	  self.onDispose = function() {
+      // any cleanup
+    }
 	}
 
 	function rowWriter(json) {
@@ -62,9 +66,9 @@
 	};
 
 	var drone = [
-    {'name': 'Drone1', 'model': 'Model1', 'status': 'Online', 'low_buttery': 'true'},
-    {'name': 'Drone2', 'model': 'Model2', 'status': 'Online', 'low_buttery': 'false'},
-    {'name': 'Drone3', 'model': 'Model1', 'status': 'Online', 'low_buttery': 'true'}
+    {'name': 'Drone1', 'model': 'Model1', 'status': 'Online', 'low_battery': 'true'},
+    {'name': 'Drone2', 'model': 'Model2', 'status': 'Online', 'low_battery': 'false'},
+    {'name': 'Drone3', 'model': 'Model1', 'status': 'Online', 'low_battery': 'true'}
 	];
 
 	freeboard.loadWidgetPlugin({
@@ -72,34 +76,106 @@
 		'display_name' : 'Table Widget',
 		'description' : 'This plugin displays information about drones',
 		'fill_size' : 'false',
-	    'settings': [
+    'settings': [
       {
-        'name': 'name',
-        'display_name': 'Name',
+        'name': 'drone_1',
+        'display_name': 'Drone 1',
         'type': 'calculated',
-        'default_value': 'Drone',
-        'description': 'name drone'
       },
       {
-        'name': 'model',
-        'display_name': 'Model',
+        'name': 'drone_2',
+        'display_name': 'Drone 2',
         'type': 'calculated',
-        'default_value': '',
-        'description': 'model drone'
       },
       {
-        'name': 'status',
-        'display_name': 'Status',
+        'name': 'drone_3',
+        'display_name': 'Drone 3',
         'type': 'calculated',
-        'default_value': '',
-        'description': 'state drone online/offline'
       },
       {
-        'name': 'low_battery',
-        'display_name': 'Low buttery',
+        'name': 'drone_4',
+        'display_name': 'Drone 4',
         'type': 'calculated',
-        'default_value': '',
-        'description': 'state buttery'
+      },
+      {
+        'name': 'drone_5',
+        'display_name': 'Drone 5',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_6',
+        'display_name': 'Drone 6',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_7',
+        'display_name': 'Drone 7',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_8',
+        'display_name': 'Drone 8',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_9',
+        'display_name': 'Drone 9',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_10',
+        'display_name': 'Drone 10',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_11',
+        'display_name': 'Drone 11',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_12',
+        'display_name': 'Drone 12',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_13',
+        'display_name': 'Drone 13',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_14',
+        'display_name': 'Drone 14',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_15',
+        'display_name': 'Drone 15',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_16',
+        'display_name': 'Drone 16',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_17',
+        'display_name': 'Drone 17',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_18',
+        'display_name': 'Drone 18',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_19',
+        'display_name': 'Drone 19',
+        'type': 'calculated',
+      },
+      {
+        'name': 'drone_20',
+        'display_name': 'Drone 20',
+        'type': 'calculated',
       }
     ],
 
