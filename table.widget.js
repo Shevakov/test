@@ -27,26 +27,9 @@
 
       	console.log(newValue);
 
-  //     if (newValue.name) {
-  //     	currentSettings[idx]['name'] = newValue.name;
-	 //      if (newValue.model) {
-  //     	currentSettings[idx]['model'] = newValue.model; 
-	 //      }
-	 //      if (newValue.status) {
-  //     	currentSettings[idx]['status'] = newValue.status; 
-	 //      }
-  //       if (newValue.low_battery) {
-  //     	currentSettings[idx]['low_battary'] = newValue.low_battery; 
-	 //      }
-  //     }
-
-  //     for (var i = 0, len = currentSettings.length; i < len; i++){
-  //     	if(currentSettings[i]['name'] !== ""){
-		// 			tbody += rowWriter(currentSettings[i]);      		
-  //     	}
-  //     $($table).find('tbody').append(tbody);
-  //     }
-  //     			$table.find('th,td').css('border','2px #545454 solid');
+      	for (var i = 0, len = newValue.length; i < len; i++){
+      		tbody += rowWriter(newValue[i]);
+      	}
 		}
 
 	  self.onDispose = function() {
@@ -56,11 +39,7 @@
 
 	function rowWriter(json) {
 	  var tr = '';
-
-	  for (var key in json) {
-	    tr += '<td>' + json[key] + '</td>';
-	  }
-
+	  tr += '<td>' + json['name'] + '</td>' + '<td>' + json['model'] + '</td>' + '<td>' + json['status'] + '</td>' + '<td>' + json['low_battery'] + '</td>';
 	  return '<tr>' + tr + '</tr>';
 	};
 
