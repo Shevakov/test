@@ -33,8 +33,8 @@
       	$table.find('th,td').css('border','2px #545454 solid');
 
       if(settingName == 'select_drone'){
-      	$($table 'tbody tr').css('background-color','');
-      	$($table 'tbody tr:nth-child('newValue')').css('background-color','red');
+      	$('$table tbody tr').css('background-color','');
+      	$('$table tbody tr:nth-child(newValue)').css('background-color','red');
       }
 		}
 
