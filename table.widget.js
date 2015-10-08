@@ -21,20 +21,20 @@
 
 		self.onCalculatedValueChanged = function(settingName, newValue){
 
-      var substr = settingName.split('_'),
-      		idx = substr[1],
-      		tbody = '';
+      var	tbody = '',
+      		i;
 
       	console.log(newValue);
 
-      	for (var i = 0, len = newValue.length; i < len; i++){
+      	for (i = 0, len = newValue.length; i < len; i++){
       		tbody += rowWriter(newValue[i]);
       	}
-      	$($table).find('tbody').append(tbody);
+      	$table.find('tbody').append(tbody);
       	$table.find('th,td').css('border','2px #545454 solid');
 
       if(settingName == 'select_drone'){
-      	console.log(newValue);
+      	$($table 'tbody tr').css('background-color','');
+      	$($table 'tbody tr:nth-child('newValue')').css('background-color','red');
       }
 		}
 
