@@ -66,7 +66,7 @@
       	}
       $($table).find('tbody').append(tbody);
       }
-
+      			$table.find('th,td').css('border','2px #545454 solid');
 		}
 
 	  self.onDispose = function() {
