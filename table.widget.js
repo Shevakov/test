@@ -60,7 +60,6 @@
 	      }
       }
 
-      $($table).find('tbody').empty();
       for (var i = 0, len = currentSettings.length; i < len; i++){
       	if(currentSettings[i]['name'] !== ""){
 					tbody += rowWriter(currentSettings[i]);      		
