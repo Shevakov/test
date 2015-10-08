@@ -45,20 +45,19 @@
 
       var substr = settingName.split('_'),
       		idx = substr[1],
-      		setting = substr[0],
       		tbody = '';
 
       if (newValue.name) {
-      	currentSettings[idx]['name'] = newValue.value; 
+      	currentSettings[idx]['name'] = newValue.name; 
       }
       else if (newValue.model) {
-      	currentSettings[idx]['model'] = newValue.value; 
+      	currentSettings[idx]['model'] = newValue.model; 
       }
       else if (newValue.status) {
-      	currentSettings[idx]['status'] = newValue.value; 
+      	currentSettings[idx]['status'] = newValue.status; 
       }
       else if (newValue.low_battery) {
-      	currentSettings[idx]['low_battary'] = newValue.value; 
+      	currentSettings[idx]['low_battary'] = newValue.low_battery; 
       }
       $($table).find('tbody').empty();
       for (var i = 0, len = currentSettings.length; i < len; i++){
