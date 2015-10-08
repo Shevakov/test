@@ -24,7 +24,7 @@
 			{'name':'','model':'','status':'','low_battery':''},
 			{'name':'','model':'','status':'','low_battery':''},
 			{'name':'','model':'','status':'','low_battery':''}
-		};
+		];
 
 		self.render = function(containerElement) {
 
