@@ -50,13 +50,13 @@
       if (newValue.name) {
       	currentSettings[idx]['name'] = newValue.name; 
       }
-      else if (newValue.model) {
+      if (newValue.model) {
       	currentSettings[idx]['model'] = newValue.model; 
       }
-      else if (newValue.status) {
+      if (newValue.status) {
       	currentSettings[idx]['status'] = newValue.status; 
       }
-      else if (newValue.low_battery) {
+      if (newValue.low_battery) {
       	currentSettings[idx]['low_battary'] = newValue.low_battery; 
       }
       $($table).find('tbody').empty();
