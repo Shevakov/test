@@ -2,19 +2,31 @@
 
 	var TableWidget = function(settings) {
 		var self = this;
-
 		var $table = $('<table style="width:100%; height:100%; font-size:11px;"><thead style="background:#CFCCCB;"><tr><th>Name</th><th>Model</th><th>Status</th><th>Low buttery</th></tr></thead><tbody></tbody></table>');
+		var currentSettings = {
+			1:{'name':'','model':'','status':'','low_battery':''},
+			2:{'name':'','model':'','status':'','low_battery':''},
+			3:{'name':'','model':'','status':'','low_battery':''},
+			4:{'name':'','model':'','status':'','low_battery':''},
+			5:{'name':'','model':'','status':'','low_battery':''},
+			6:{'name':'','model':'','status':'','low_battery':''},
+			7:{'name':'','model':'','status':'','low_battery':''},
+			8:{'name':'','model':'','status':'','low_battery':''},
+			9:{'name':'','model':'','status':'','low_battery':''},
+			10:{'name':'','model':'','status':'','low_battery':''},
+			11:{'name':'','model':'','status':'','low_battery':''},
+			12:{'name':'','model':'','status':'','low_battery':''},
+			13:{'name':'','model':'','status':'','low_battery':''},
+			14:{'name':'','model':'','status':'','low_battery':''},
+			15:{'name':'','model':'','status':'','low_battery':''},
+			16:{'name':'','model':'','status':'','low_battery':''},
+			17:{'name':'','model':'','status':'','low_battery':''},
+			18:{'name':'','model':'','status':'','low_battery':''},
+			19:{'name':'','model':'','status':'','low_battery':''},
+			20:{'name':'','model':'','status':'','low_battery':''},
+		};
 
 		self.render = function(containerElement) {
-			console.log('all be back')
-
-		  var tbody = '';
-
-		  for(var i = 0, len = drone.length; i < len; i++){
-		  	tbody += rowWriter(drone[i]); 
-		  }
-
-		  $($table).find('tbody').append(tbody);
 
 			$(containerElement).append($table);
 
@@ -31,23 +43,31 @@
 
 		self.onCalculatedValueChanged = function(settingName, newValue){
 
-			if(settingName == 'name'){
-			
-			console.log('name')
+      var substr = settingName.split('_'),
+      		idx = substr[1],
+      		setting = substr[0],
+      		tbody = '';
 
-				if(settingName == 'model'){
-					console.log('model');
-				}
-			
-				if(settingName == 'status'){
-					console.log('status');
-				}
+      if (newValue.name == 'name') {
+      	currentSettings[idx]['name'] = newValue.value; 
+      }
+      else if (newValue.name == 'model') {
+      	currentSettings[idx]['model'] = newValue.value; 
+      }
+      else if (newValue.name == 'status') {
+      	currentSettings[idx]['status'] = newValue.value; 
+      }
+      else if (newValue.name == 'low_battery') {
+      	currentSettings[idx]['low_battary'] = newValue.value; 
+      }
+      $($table).find('tbody').empty();
+      for (var i = 0, len = currentSettings.length; i < len; i++){
+      	if(currentSettings[i]['name'] !== ""){
+					tbody += rowWriter(currentSettings[i]);      		
+      	}
+      $($table).find('tbody').append(tbody);
+      }
 
-				if(settingName == 'low_battery'){
-					console.log('low_battery');
-				}
-
-			}
 		}
 
 	  self.onDispose = function() {
@@ -65,11 +85,6 @@
 	  return '<tr>' + tr + '</tr>';
 	};
 
-	var drone = [
-    {'name': 'Drone1', 'model': 'Model1', 'status': 'Online', 'low_battery': 'true'},
-    {'name': 'Drone2', 'model': 'Model2', 'status': 'Online', 'low_battery': 'false'},
-    {'name': 'Drone3', 'model': 'Model1', 'status': 'Online', 'low_battery': 'true'}
-	];
 
 	freeboard.loadWidgetPlugin({
 		'type_name' : 'my_table_widget',
