@@ -3,27 +3,27 @@
 	var TableWidget = function(settings) {
 		var self = this;
 		var $table = $('<table style="width:100%; height:100%; font-size:11px;"><thead style="background:#CFCCCB;"><tr><th>Name</th><th>Model</th><th>Status</th><th>Low buttery</th></tr></thead><tbody></tbody></table>');
-		var currentSettings = {
-			1:{'name':'','model':'','status':'','low_battery':''},
-			2:{'name':'','model':'','status':'','low_battery':''},
-			3:{'name':'','model':'','status':'','low_battery':''},
-			4:{'name':'','model':'','status':'','low_battery':''},
-			5:{'name':'','model':'','status':'','low_battery':''},
-			6:{'name':'','model':'','status':'','low_battery':''},
-			7:{'name':'','model':'','status':'','low_battery':''},
-			8:{'name':'','model':'','status':'','low_battery':''},
-			9:{'name':'','model':'','status':'','low_battery':''},
-			10:{'name':'','model':'','status':'','low_battery':''},
-			11:{'name':'','model':'','status':'','low_battery':''},
-			12:{'name':'','model':'','status':'','low_battery':''},
-			13:{'name':'','model':'','status':'','low_battery':''},
-			14:{'name':'','model':'','status':'','low_battery':''},
-			15:{'name':'','model':'','status':'','low_battery':''},
-			16:{'name':'','model':'','status':'','low_battery':''},
-			17:{'name':'','model':'','status':'','low_battery':''},
-			18:{'name':'','model':'','status':'','low_battery':''},
-			19:{'name':'','model':'','status':'','low_battery':''},
-			20:{'name':'','model':'','status':'','low_battery':''},
+		var currentSettings = [
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''},
+			{'name':'','model':'','status':'','low_battery':''}
 		};
 
 		self.render = function(containerElement) {
