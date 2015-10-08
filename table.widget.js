@@ -48,16 +48,16 @@
       		setting = substr[0],
       		tbody = '';
 
-      if (newValue.name == 'name') {
+      if (newValue.name) {
       	currentSettings[idx]['name'] = newValue.value; 
       }
-      else if (newValue.name == 'model') {
+      else if (newValue.model) {
       	currentSettings[idx]['model'] = newValue.value; 
       }
-      else if (newValue.name == 'status') {
+      else if (newValue.status) {
       	currentSettings[idx]['status'] = newValue.value; 
       }
-      else if (newValue.name == 'low_battery') {
+      else if (newValue.low_battery) {
       	currentSettings[idx]['low_battary'] = newValue.value; 
       }
       $($table).find('tbody').empty();
