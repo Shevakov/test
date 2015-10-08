@@ -70,12 +70,12 @@
 		'display_name' : 'Table Widget',
 		'description' : 'This plugin displays information about drones',
 		'fill_size' : 'false',
-    'settings':
+    'settings':[
     	{
         'name': 'input',
         'display_name': 'Input',
         'type': 'calculated',
-      },
+      }],
 
 
 		newInstance: function(settings, newInstanceCallback)
