@@ -32,6 +32,10 @@
       	}
       	$($table).find('tbody').append(tbody);
       	$table.find('th,td').css('border','2px #545454 solid');
+
+      if(settingName == 'select_drone'){
+      	console.log(newValue);
+      }
 		}
 
 	  self.onDispose = function() {
@@ -56,9 +60,13 @@
         'name': 'input',
         'display_name': 'Input',
         'type': 'calculated',
-      }],
-
-
+      },
+      {
+      	'name': 'select_drone',
+      	'display_name': 'Select Drone',
+      	'type': 'calculated',
+      }
+      ],
 		newInstance: function(settings, newInstanceCallback)
 		{
 			newInstanceCallback(new TableWidget(settings));
