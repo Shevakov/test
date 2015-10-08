@@ -30,6 +30,8 @@
       	for (var i = 0, len = newValue.length; i < len; i++){
       		tbody += rowWriter(newValue[i]);
       	}
+      	$($table).find('tbody').append(tbody);
+      	$table.find('th,td').css('border','2px #545454 solid');
 		}
 
 	  self.onDispose = function() {
