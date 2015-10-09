@@ -7,7 +7,6 @@
 		self.render = function(containerElement) {
 
 			$(containerElement).append($table);
-
 			$table.find('th,td').css('border','2px #545454 solid');
 		}
 
@@ -20,6 +19,9 @@
 		}
 
 		self.onCalculatedValueChanged = function(settingName, newValue){
+
+			var indicator_light_off = "border-radius: 50%; width: 10px; height: 10px; border: 2px solid rgb(61, 61, 61); background-color: rgb(34, 34, 34);"
+			var indicator_light_on = "border-radius: 50%; width: 10px; height: 10px; border: 2px solid rgb(61, 61, 61); background-color: rgb(255, 199, 115); box-shadow: rgb(255, 153, 0) 0px 0px 15px;"
 
       var	tbody = '',
       		i;
@@ -44,7 +46,7 @@
 
 	function rowWriter(json) {
 	  var tr = '';
-	  tr += '<td>' + json['name'] + '</td>' + '<td>' + json['model'] + '</td>' + '<td>' + json['status'] + '</td>' + '<td>' + json['low_battery'] + '</td>';
+	  tr += '<td>' + json['name'] + '</td>' + '<td>' + json['model'] + '</td>' + '<td>' + json['status'] + '</td>' + '<td>' + '<div style='+json['low_battery']? indicator_light_on : indicator_light_off+'></div>' + '</td>';
 	  return '<tr>' + tr + '</tr>';
 	};
 
