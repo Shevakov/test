@@ -4,6 +4,7 @@
 		var self = this;
 		var $table = $('<table style="width:100%; height:100%; font-size:11px; text-align: center;"><thead style="background:#CFCCCB;"><tr><th>Name</th><th>Model</th><th>Status</th><th>Low battery</th></tr></thead><tbody></tbody></table>');
 		var currentSettings = [];
+		var state;
 		self.render = function(containerElement) {
 
 			$(containerElement).append($table);
@@ -12,6 +13,7 @@
 			$table.find('tbody').on('click','tr', function(){
 				$table.find('tbody tr').css('background-color','');
 				$(this).css('background-color','rgb(87, 124, 159)');
+				state($(this).index() + 1);
 			});
 		}
 
@@ -35,9 +37,9 @@
       	$table.find('tbody').append(tbody);
       	$table.find('th,td').css('border','2px #545454 solid');
       };
-      if(settingName == 'select_drone'){
+      if(settingName == 'state'){
       	$table.find('tbody tr').css('background-color','');
-      	$table.find('tbody tr:nth-child('+newValue+')').css('background-color','rgb(87, 124, 159)');
+      	$table.find('tbody tr:nth-child('+newValue()+')').css('background-color','rgb(87, 124, 159)');
       }
 		}
 
@@ -68,8 +70,8 @@
         'type': 'calculated',
       },
       {
-      	'name': 'select_drone',
-      	'display_name': 'Select Drone',
+      	'name': 'state',
+      	'display_name': 'State',
       	'type': 'calculated',
       }
       ],
