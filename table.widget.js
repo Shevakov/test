@@ -30,7 +30,7 @@
       	$table.find('tbody').empty();
       	$table.find('tbody').append(tbody);
       	$table.find('th,td').css('border','2px #545454 solid');
-      }:
+      };
       if(settingName == 'select_drone'){
       	$table.find('tbody tr').css('background-color','');
       	$table.find('tbody tr:nth-child(newValue)').css('background-color','red');
