@@ -13,7 +13,9 @@
 			$table.find('tbody').on('click','tr', function(){
 				$table.find('tbody tr').css('background-color','');
 				$(this).css('background-color','rgb(87, 124, 159)');
+				if(typeof state == 'function'){
 				state($(this).index() + 1);
+				}
 			});
 		}
 
@@ -38,6 +40,7 @@
       	$table.find('th,td').css('border','2px #545454 solid');
       };
       if(settingName == 'state'){
+      	state = newValue;
       	$table.find('tbody tr').css('background-color','');
       	$table.find('tbody tr:nth-child('+newValue()+')').css('background-color','rgb(87, 124, 159)');
       }
