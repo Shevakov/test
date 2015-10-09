@@ -8,8 +8,10 @@
 
 			$(containerElement).append($table);
 			$table.find('th,td').css('border','2px #545454 solid');
-			$table.on('click', function(){
-
+			$table.parent().css('overflow','scroll');
+			$table.find('tbody tr').on('click', function(){
+				$table.find('tbody tr').css('background-color','');
+				$(this).css('background-color','rgb(87, 124, 159)');
 			});
 
 		}
