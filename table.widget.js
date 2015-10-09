@@ -9,11 +9,10 @@
 			$(containerElement).append($table);
 			$table.find('th,td').css('border','2px #545454 solid');
 			$table.parent().css('overflow','scroll');
-			$table.find('tbody tr').on('click', function(){
+			$table.find('tbody').on('click', function(){
 				$table.find('tbody tr').css('background-color','');
-				$(this).css('background-color','rgb(87, 124, 159)');
+				$(this:has('tr')).css('background-color','rgb(87, 124, 159)');
 			});
-
 		}
 
 		self.getHeight = function() {
@@ -25,8 +24,6 @@
 		}
 
 		self.onCalculatedValueChanged = function(settingName, newValue){
-
-			
 
       var	tbody = '',
       		i;
