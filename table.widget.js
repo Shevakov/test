@@ -11,7 +11,7 @@
 			$table.parent().css('overflow','scroll');
 			$table.find('tbody').on('click', function(){
 				$table.find('tbody tr').css('background-color','');
-				$(this:has('tr')).css('background-color','rgb(87, 124, 159)');
+				$(this).css('background-color','rgb(87, 124, 159)');
 			});
 		}
 
