@@ -33,7 +33,7 @@
       };
       if(settingName == 'select_drone'){
       	$table.find('tbody tr').css('background-color','');
-      	$table.find('tbody tr:nth-child(newValue)').css('background-color','red');
+      	$table.find('tbody tr:nth-child('+newValue+')').css('background-color','red');
       }
 		}
 
